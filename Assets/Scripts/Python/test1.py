@@ -85,7 +85,7 @@ def process(input_image, prompt, a_prompt, n_prompt, num_samples, image_resoluti
 input_image = np.array(cv2.imread('test_imgs/castle.png'))
 
 # prompt 关键词 string
-prompt = 'cute'
+prompt = ' '
 
 # added_prompt string
 a_prompt = 'best quality, extremely detailed'
@@ -106,7 +106,7 @@ image_resolution = 512
 ddim_steps = 30
 
 # 自动猜测绘画的风格或主题的功能 boolean
-guess_mode = False
+guess_mode = True
 
 # 强度参数 float
 # 控制强度越高，生成的图像越清晰，但是同时也会带来更多的噪声和不自然的细节。
@@ -182,6 +182,11 @@ with torch.no_grad():
 
     results = [x_samples[i] for i in range(num_samples)]
     print(type(results[0]))
+    #颜色通道修改
+    for img in results:
+        tmp = img[:, :, 0].copy()
+        img[:, :, 0] = img[:, :, 2].copy()
+        img[:, :, 2] = tmp
 
     for i in range(0,len(results)):
         cv2.imwrite('res'+str(i)+'.png', results[i])
