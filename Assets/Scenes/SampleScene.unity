@@ -342,10 +342,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770015690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65fad629a952887489e923d973d31069, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d119b6ca3457e24d84f036a55946af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2800000, guid: 38169cf43ce16e2438579f2b8180c1ed, type: 3}
-  cubeScale: 1
-  faceIndex: 0
-  thick: 100
+  spacing: 0.0001
+  numImages: 100
+  startPosition: {x: 0, y: 0, z: 0}
+  endPosition: {x: 0, y: 0.1, z: 0}
