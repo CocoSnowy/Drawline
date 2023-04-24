@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d119b6ca3457e24d84f036a55946af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 2800000, guid: 38169cf43ce16e2438579f2b8180c1ed, type: 3}
+  image: {fileID: 2800000, guid: 5131a27f179c96b46be6fab8d8d81609, type: 3}
   spacing: 0.0001
   numImages: 100
   startPosition: {x: 0, y: 0, z: 0}
